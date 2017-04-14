@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <label>请输入北京今天空气质量:<input id="aqi-input" type="text"/></label>
+        <button id="button">确认填写</button>
+        <div>您输入的值是:<span id="aqi-display">尚无录入</span></div>
+        <script type="text/javascript">
+            (function(){
+                var myButton = document.getElementById('button');
+                var myHtml = document.getElementById('aqi-display');
+                var myInput = document.getElementById('aqi-input');
+                myButton.onclick = function(){
+                    if(myInput.value.length>0){
+                         myHtml.innerHTML = myInput.value;
+                    }
+                    else{
+                         myHtml.innerHTML = '尚无录入';
+                    }
+                   
+                }
+            })();
+        </script>
+    </body>
+</html>
